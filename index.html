@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Персональный сайт писателя-фантаста Александра Болотова. Фантастика и реализм.">
+    <title>Александр Болотов — писатель-фантаст</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Кастомный курсор-точка (отключается на мобильных и при prefers-reduced-motion) -->
+    <div class="custom-cursor" aria-hidden="true"></div>
+    <div class="custom-cursor-trail" aria-hidden="true"></div>
+
+    <!-- Анимированное звёздное поле -->
+    <canvas id="starfield" aria-hidden="true"></canvas>
+    <!-- Гранульность/шум -->
+    <div class="grain-overlay" aria-hidden="true"></div>
+    <!-- Тонкие сканлайны -->
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <!-- Навигация (минимальная) -->
+    <header class="site-header">
+        <nav class="nav container">
+            <a href="#hero" class="nav-logo">А.Б.</a>
+            <button class="nav-toggle" aria-label="Открыть меню" aria-expanded="false">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#hero" class="nav-link">Главная</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">О себе</a></li>
+                <li class="nav-item"><a href="#books" class="nav-link">Произведения</a></li>
+                <li class="nav-item"><a href="#stats" class="nav-link">Статистика</a></li>
+                <li class="nav-item"><a href="#connect" class="nav-link">Подписка/Связь</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero-секция -->
+        <section id="hero" class="section hero">
+            <div class="hero-parallax-layer hero-parallax-stars" aria-hidden="true"></div>
+            <div class="hero-parallax-layer hero-parallax-particles" aria-hidden="true"></div>
+            <div class="container hero-content">
+                <h1 class="hero-title" data-typewriter="АЛЕКСАНДР БОЛОТОВ">АЛЕКСАНДР БОЛОТОВ</h1>
+                <p class="hero-subtitle">Писатель-фантаст · Фантастика и реализм</p>
+                <p class="hero-quote">«Там, где заканчивается реальность, начинается история»</p>
+                <a href="https://author.today/u/alex_bolotoff" target="_blank" rel="noopener noreferrer" class="btn btn-neon btn-cta">
+                    Читать на Author.Today
+                </a>
+            </div>
+            <div class="hero-scroll-indicator" aria-hidden="true">
+                <span class="scroll-line"></span>
+                <span class="scroll-text">Листайте вниз</span>
+            </div>
+        </section>
+
+        <!-- Блок с фото автора -->
+        <section id="author-photo" class="section author-photo">
+            <div class="container">
+                <div class="author-photo-wrapper fade-in-on-scroll">
+                    <div class="author-avatar" aria-label="Аватар Александра Болотова">
+                        <!-- Замените src на путь к фото автора, например ./assets/author.jpg -->
+                        <div class="author-avatar-placeholder">
+                            <span class="author-initials">АБ</span>
+                        </div>
+                        <!-- <img src="./assets/author.jpg" alt="Александр Болотов — писатель-фантаст" class="author-avatar-img"> -->
+                    </div>
+                    <p class="author-photo-caption">Александр Болотов</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- О себе -->
+        <section id="about" class="section about">
+            <div class="container">
+                <header class="section-header fade-in-on-scroll">
+                    <h2 class="section-title">О себе</h2>
+                    <div class="section-divider"></div>
+                </header>
+                <article class="about-content fade-in-on-scroll">
+                    <blockquote class="about-quote">
+                        «Писать начал одновременно поздно и недавно: почти в сорок лет и с 2021 года. Зато есть о чём рассказать. Пишу преимущественно фантастику и реализм.»
+                    </blockquote>
+                    <p class="about-text">
+                        Александр Болотов — автор на <a href="https://author.today/u/alex_bolotoff" target="_blank" rel="noopener noreferrer">Author.Today</a>. Пишет фантастику и реализм, начал творческий путь в 2021 году, почти в 40 лет.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Книги/Произведения -->
+        <section id="books" class="section books">
+            <div class="container">
+                <header class="section-header fade-in-on-scroll">
+                    <h2 class="section-title">Произведения</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">Здесь будут собраны работы автора. Структура готова для наполнения.</p>
+                </header>
+                <div class="books-grid">
+                    <!-- Карточка 1 -->
+                    <article class="book-card fade-in-on-scroll">
+                        <div class="book-cover book-cover-placeholder">
+                            <div class="book-cover-gradient"></div>
+                            <span class="book-cover-icon">📖</span>
+                        </div>
+                        <div class="book-content">
+                            <h3 class="book-title">Название книги</h3>
+                            <!-- Замените на реальное название/описание/ссылку -->
+                            <p class="book-genre">Жанр: Фантастика / Реализм</p>
+                            <p class="book-description">Краткое описание произведения. Здесь будет аннотация книги, когда она будет добавлена.</p>
+                            <a href="https://author.today/u/alex_bolotoff" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-book">
+                                Подробнее
+                            </a>
+                        </div>
+                    </article>
+                    <!-- Карточка 2 -->
+                    <article class="book-card fade-in-on-scroll">
+                        <div class="book-cover book-cover-placeholder">
+                            <div class="book-cover-gradient"></div>
+                            <span class="book-cover-icon">🚀</span>
+                        </div>
+                        <div class="book-content">
+                            <h3 class="book-title">Название книги</h3>
+                            <!-- Замените на реальное название/описание/ссылку -->
+                            <p class="book-genre">Жанр: Научная фантастика</p>
+                            <p class="book-description">Краткое описание произведения. Здесь будет аннотация книги, когда она будет добавлена.</p>
+                            <a href="https://author.today/u/alex_bolotoff" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-book">
+                                Подробнее
+                            </a>
+                        </div>
+                    </article>
+                    <!-- Карточка 3 -->
+                    <article class="book-card fade-in-on-scroll">
+                        <div class="book-cover book-cover-placeholder">
+                            <div class="book-cover-gradient"></div>
+                            <span class="book-cover-icon">🌌</span>
+                        </div>
+                        <div class="book-content">
+                            <h3 class="book-title">Название книги</h3>
+                            <!-- Замените на реальное название/описание/ссылку -->
+                            <p class="book-genre">Жанр: Космическая опера</p>
+                            <p class="book-description">Краткое описание произведения. Здесь будет аннотация книги, когда она будет добавлена.</p>
+                            <a href="https://author.today/u/alex_bolotoff" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-book">
+                                Подробнее
+                            </a>
+                        </div>
+                    </article>
+                </div>
+                <p class="books-note">* Карточки являются плейсхолдерами. Замените названия, жанры, описания и ссылки на реальные произведения автора.</p>
+            </div>
+        </section>
+
+        <!-- Статистика -->
+        <section id="stats" class="section stats">
+            <div class="container">
+                <header class="section-header fade-in-on-scroll">
+                    <h2 class="section-title">Статистика</h2>
+                    <div class="section-divider"></div>
+                </header>
+                <div class="stats-grid">
+                    <article class="stat-card fade-in-on-scroll">
+                        <div class="stat-border"></div>
+                        <div class="stat-content">
+                            <div class="stat-number" data-count="1296">0</div>
+                            <div class="stat-label">Читателей</div>
+                        </div>
+                    </article>
+                    <article class="stat-card fade-in-on-scroll">
+                        <div class="stat-border"></div>
+                        <div class="stat-content">
+                            <div class="stat-number" data-count="1123">0</div>
+                            <div class="stat-label">Подписок</div>
+                        </div>
+                    </article>
+                    <article class="stat-card fade-in-on-scroll">
+                        <div class="stat-border"></div>
+                        <div class="stat-content">
+                            <div class="stat-number" data-count="11">0</div>
+                            <div class="stat-label">Книг</div>
+                        </div>
+                    </article>
+                </div>
+                <p class="stats-source">Данные по состоянию на профиль <a href="https://author.today/u/alex_bolotoff" target="_blank" rel="noopener noreferrer">Author.Today</a></p>
+            </div>
+        </section>
+
+        <!-- Подписка/Связь -->
+        <section id="connect" class="section connect">
+            <div class="container">
+                <header class="section-header fade-in-on-scroll">
+                    <h2 class="section-title">Подписка и связь</h2>
+                    <div class="section-divider"></div>
+                </header>
+                <div class="connect-grid">
+                    <div class="connect-block fade-in-on-scroll">
+                        <h3 class="connect-heading">Следите за новыми произведениями</h3>
+                        <p class="connect-text">Подпишитесь на профиль Александра Болотова на Author.Today, чтобы не пропустить новые истории.</p>
+                        <a href="https://author.today/u/alex_bolotoff" target="_blank" rel="noopener noreferrer" class="btn btn-neon btn-large">
+                            Подписаться на Author.Today
+                        </a>
+                    </div>
+                    <div class="connect-block fade-in-on-scroll">
+                        <h3 class="connect-heading">Социальные сети</h3>
+                        <p class="connect-text">Здесь можно разместить ссылки на соцсети автора. Сейчас — плейсхолдеры.</p>
+                        <ul class="social-list">
+                            <!-- Замените # на реальные ссылки -->
+                            <li class="social-item">
+                                <a href="#" class="social-link" aria-label="VK (плейсхолдер)">
+                                    <span class="social-icon">VK</span>
+                                    <span class="social-name">ВКонтакте</span>
+                                </a>
+                            </li>
+                            <li class="social-item">
+                                <a href="#" class="social-link" aria-label="Telegram (плейсхолдер)">
+                                    <span class="social-icon">TG</span>
+                                    <span class="social-name">Telegram</span>
+                                </a>
+                            </li>
+                            <li class="social-item">
+                                <a href="#" class="social-link" aria-label="Яндекс.Дзен (плейсхолдер)">
+                                    <span class="social-icon">ДЗ</span>
+                                    <span class="social-name">Яндекс.Дзен</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="connect-block connect-block-full fade-in-on-scroll">
+                        <h3 class="connect-heading">Форма подписки на обновления</h3>
+                        <p class="connect-text">Визуальная форма. Без бэкенда — только фронтенд-валидация.</p>
+                        <form class="subscribe-form" novalidate>
+                            <div class="form-group">
+                                <label for="subscribe-email" class="form-label">Email</label>
+                                <input type="email" id="subscribe-email" class="form-input" name="email" placeholder="example@mail.ru" autocomplete="email" required>
+                                <span class="form-error" aria-live="polite"></span>
+                            </div>
+                            <button type="submit" class="btn btn-neon btn-form">Подписаться</button>
+                            <p class="form-success" aria-live="polite"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-divider"></div>
+        <div class="container footer-content">
+            <p class="footer-copyright">© 2026 Александр Болотов. Все права защищены.</p>
+            <p class="footer-profile">
+                <a href="https://author.today/u/alex_bolotoff" target="_blank" rel="noopener noreferrer">Профиль на Author.Today</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
